@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:mecanicoapp/Screens/mainScreen.dart';
 import 'package:mecanicoapp/Widgets/Calendar.dart';
 import 'package:mecanicoapp/Widgets/Tabla_Principal.dart';
 
@@ -30,8 +31,7 @@ class _Principal_sin_datosState extends State<Principal_sin_datos> {
         children: <Widget>[
           SizedBox(
             height: 20,
-          ),
-         Container(
+          ), Container(
                   height: 50,
                   width: 150,
                   decoration: BoxDecoration(
@@ -50,7 +50,7 @@ class _Principal_sin_datosState extends State<Principal_sin_datos> {
                         height: 15,
                       ),
                       Text(
-                        'Por el momento...',
+                        'No hay registros',
                         style: GoogleFonts.montserrat(
                             color: Colors.white, fontSize: 24),
                             
@@ -60,25 +60,6 @@ class _Principal_sin_datosState extends State<Principal_sin_datos> {
                     
                   ),
                   ),
-            Container(
-child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Text(
-                        'No hay registros',
-                        style: GoogleFonts.montserrat(
-                            color: Colors.white, fontSize: 18),
-                            
-                      ),
-                      
-                    ],
-                    
-                  ),
-            ),
             SizedBox(height: 30,),
              Container(
 child: Column(
@@ -99,7 +80,15 @@ child: Column(
                     
                   ),
             ),
-          
+            SizedBox(height: 100,),
+         FloatingActionButton(onPressed: (){
+          Navigator.push(context,
+          MaterialPageRoute(builder: (context)=>mainScreen()),
+          );
+         },
+         backgroundColor: HexColor('#243447'),
+         child: const Icon(Icons.navigation),
+         ),
               
         ],
       ),

@@ -5,6 +5,7 @@ import 'package:mecanicoapp/Datos/vehiculo_datos.dart';
 import 'package:mecanicoapp/Screens/mainScreen.dart';
 import 'package:mecanicoapp/Widgets/Principal_sin_datos.dart';
 import 'package:mecanicoapp/Widgets/Tabla_Principal.dart';
+import 'package:mecanicoapp/Widgets/llenado.dart';
 
 void main() async {
   runApp(const MyApp());
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Principal_sin_datos(),
+      home:llenado(),
     );
   }
 }
